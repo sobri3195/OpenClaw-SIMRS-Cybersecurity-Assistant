@@ -1,0 +1,25 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:////app/data/openclaw.db
+      ALLOW_PUBLIC_SCAN: "false"
+      ENABLE_VULN_SCRIPT: "false"
+      OLLAMA_ENABLED: "false"
+      OLLAMA_URL: http://ollama:11434/api/generate
+    volumes:
+      - openclaw-data:/app/data
+    restart: unless-stopped
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    environment:
+      VITE_API_URL: http://localhost:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+volumes:
+  openclaw-data:

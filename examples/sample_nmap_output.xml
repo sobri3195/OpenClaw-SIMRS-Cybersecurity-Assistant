@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -Pn -T2 --open -oX output.xml 192.168.56.10" start="1719859200">
+  <host>
+    <status state="up" reason="user-set" />
+    <address addr="192.168.56.10" addrtype="ipv4" />
+    <ports>
+      <port protocol="tcp" portid="22">
+        <state state="open" reason="syn-ack" />
+        <service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu" extrainfo="Ubuntu Linux" />
+      </port>
+      <port protocol="tcp" portid="445">
+        <state state="open" reason="syn-ack" />
+        <service name="microsoft-ds" product="Samba smbd" version="4.7.6" extrainfo="workgroup: SIMRS" />
+      </port>
+      <port protocol="tcp" portid="3306">
+        <state state="open" reason="syn-ack" />
+        <service name="mysql" product="MySQL" version="5.7.31" />
+      </port>
+    </ports>
+  </host>
+</nmaprun>

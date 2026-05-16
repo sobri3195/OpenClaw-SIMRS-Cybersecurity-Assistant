@@ -1,0 +1,32 @@
+[
+  {
+    "product": "OpenSSH",
+    "aliases": ["OpenSSH"],
+    "min_version": "7.0",
+    "max_version": "7.6",
+    "cve_id": "CVE-POC-0001",
+    "severity": "Medium",
+    "summary": "Dummy PoC entry for older OpenSSH versions requiring patch review.",
+    "remediation": "Verify vendor patch level and restrict SSH to management subnet."
+  },
+  {
+    "product": "Apache httpd",
+    "aliases": ["Apache", "Apache httpd"],
+    "min_version": "2.2.0",
+    "max_version": "2.2.34",
+    "cve_id": "CVE-POC-0002",
+    "severity": "High",
+    "summary": "Dummy PoC entry for legacy Apache 2.2 web server baseline.",
+    "remediation": "Upgrade to supported Apache release and review TLS/application hardening."
+  },
+  {
+    "product": "MySQL",
+    "aliases": ["MySQL", "MariaDB"],
+    "min_version": "5.0.0",
+    "max_version": "5.7.44",
+    "cve_id": "CVE-POC-0003",
+    "severity": "High",
+    "summary": "Dummy PoC entry for older MySQL-compatible database versions.",
+    "remediation": "Plan database upgrade, restrict network access, and verify backups."
+  }
+]
